@@ -1,0 +1,22 @@
+{
+    "peliculas": [
+      {
+        "Genero": "Terror",
+        "Nombre": "annabel",
+        "Protagonista": "Keanu Reaves"
+      },
+
+      {
+        "Genero": "Terror",
+        "Nombre": "Terror en Silent Hills",
+        "Protagonista": "Sylvester Stallone"
+      },
+  
+      {
+        "Genero": "Terror",
+        "Nombre": "It",
+        "Protagonista": "Tom Cruise"
+      }
+    ]
+  }
+  

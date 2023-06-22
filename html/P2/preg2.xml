@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<animales>
+	<mamiferos>
+		<id>A01</id>
+		<nombre>El Oso</nombre>
+		<comida>Miel</comida>
+	</mamiferos>
+	<mamiferos>
+		<id>A02</id>
+		<nombre>El Guacamayo</nombre>
+		<comida>Semillas</comida>
+	</mamiferos>
+	<reptiles>
+		<id>A03</id>
+		<nombre>El Dinosaurio</nombre>
+		<comida>Carne y hierba</comida>
+	</reptiles>
+</animales>
