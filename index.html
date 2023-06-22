@@ -50,11 +50,11 @@
       <ul>
         <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
         <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Acerca de</span></a></li>
-        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Solucionario</span></a>
+        </li>
         <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Ejecucion de
               Ejercicios</span></a></li>
-        <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
-        <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+
       </ul>
     </nav><!-- .nav-menu -->
 
@@ -131,21 +131,26 @@
 
     <!-- ======= Resume Section ======= -->
     <section id="resume" class="resume">
-      <div class="container" data-aos="fade-up">
+      <div class="container  " data-aos="fade-up">
 
         <div class="section-title">
           <h2>Soluciones</h2>
-          <p>A continuación, se presentan las soluciones de cada uno de los ejercicios </p>
+          <p>
+            A continuación, se presentan las soluciones de cada uno de los ejercicios con loques de código que contienen
+            os elementos necesarios para la correcta ejecución de los ejercicios, adicionalmente
+            se explica la funcionalidad de las funciones y parten importantes de código JavaScript como HTML y los
+            recursos tanto XML, JSON y AJAX cabe recalcar que no se aplicaran clases css en los bloques de codigo de explicación para evitar confuciones al momento de la implementación</p>
         </div>
 
         <div class="row">
 
+          <!--=== Ejercicio 1=== -->
           <div class="col-lg-12">
-            <h3 class="resume-title">Ejercicio 1</h3>
+            <h3 class="resume-title" data-aos="fade-right">Ejercicio 1</h3>
             <div class="resume-item ">
-              <h4>html</h4>
+              <h4 data-aos="fade-left">html</h4>
 
-              <pre class=" pre-fondo  "><code class="   ">&lt;div&gt;
+              <pre class=" pre-fondo  " data-aos="zoom-in" data-aos-delay="300"><code class=" ">&lt;div&gt;
 &lt;p&gt;Analizar una cadena de texto en un objeto DOM XML y extraer esa Información con JavaScript, para este
 ejercicio se utilizara una cadena de texto sobre animales pertenecientes a un zoloogico&lt;/p&gt;
 
@@ -158,7 +163,7 @@ ejercicio se utilizara una cadena de texto sobre animales pertenecientes a un zo
     
                     </code></pre>
 
-              <p>Como se puede observar el bloque de código HTML implementa un div
+              <p data-aos="fade-left">Como se puede observar el bloque de código HTML implementa un div
                 dedicado al
                 contenido el cual crea 3 botones para el despliegue de la información solicitada, estos botones poseen
                 la
@@ -167,10 +172,11 @@ ejercicio se utilizara una cadena de texto sobre animales pertenecientes a un zo
               </p>
             </div>
             <div class="resume-item">
-              <h4>Sección del scrip</h4>
-              <p><em>La explicación de los procesos que hace el script están comentados dentro del mismo</em></p>
+              <h4 data-aos="fade-left">Sección del scrip</h4>
+              <p data-aos="fade-left"><em>La explicación de los procesos que hace el script están comentados dentro del
+                  mismo</em></p>
 
-              <pre class=" pre-fondo  "><code class="">//Declaración de variable para posterior uso  
+              <pre class=" pre-fondo  " data-aos="zoom-in" data-aos-delay="300"><code class="">//Declaración de variable para posterior uso  
                 var parser, xmlDoc;
     //La variable text lleva texto en formato, xml cuando se observa el mismo se asemeja a formato uml con clases y
     atributos, donde la clase es zoológico y posee varios animales tal como lo nombra la etiqueta.
@@ -201,26 +207,29 @@ ejercicio se utilizara una cadena de texto sobre animales pertenecientes a un zo
       document.getElementById("p1").innerHTML = xmlDoc.getElementsByTagName("mamifero")[2].childNodes[0].nodeValue
     }
   </code></pre>
-              <p>La variable text lleva texto en formato, xml cuando se observa el mismo se asemeja a formato uml con
+              <p data-aos="fade-left">La variable text lleva texto en formato, xml cuando se observa el mismo se asemeja
+                a formato uml con
                 clases y
                 atributos, donde la clase es zoológico y posee varios animales tal como lo nombra la etiqueta.
                 Como se puede observar todas las etiquetas cierran con una igual con formato cierre</p>
 
             </div>
             <div class="resume-item">
-              <h4>FUNCION</h4>
-              <h5>explicación</h5>
-              <p>Como se puede observar la función trae animal se repite 3 veces y en cada implementación el pequeño
+              <h4 data-aos="fade-left">FUNCION</h4>
+              <h5 data-aos="zoom-in" data-aos-delay="400">explicación</h5>
+              <p data-aos="fade-left">Como se puede observar la función trae animal se repite 3 veces y en cada
+                implementación el pequeño
                 cambio que se
                 realiza es en el índice, así que generalizadamente se explicará para una función donde más tarde se
                 puede extrapolar la
                 información.</p>
-              <pre class=" pre-fondo  "><code class="">function traerAnimal1() {
+              <pre class=" pre-fondo  " data-aos="zoom-in" data-aos-delay="300"><code class="">function traerAnimal1() {
   parser = new DOMParser();
   xmlDoc = parser.parseFromString(text, "text/xml");
   document.getElementById("p1").innerHTML = xmlDoc.getElementsByTagName("mamifero")[0].childNodes[0].nodeValue
 }</code></pre>
-              <p>Como se puede observar se explica brevemente DOMParser, luego de inicializar el objeto lo hace uso para
+              <p data-aos="fade-left">Como se puede observar se explica brevemente DOMParser, luego de inicializar el
+                objeto lo hace uso para
                 reaizar el
                 cambio de un string hacia xml. En la línea final buscará el elemento p1 que se encuentra definido en la
                 sección HTML y
@@ -231,19 +240,20 @@ ejercicio se utilizara una cadena de texto sobre animales pertenecientes a un zo
               <div class="row text-center botones1 mt-5">
 
                 <div class="col-lg-12 mt-2 mb-2">
-                  <button onclick="ejer1()"> Ejecución del ejercicio </button>
+                  <button onclick="ejer1()" data-aos="fade-down"> Ejecución del ejercicio </button>
                 </div>
               </div>
 
             </div>
           </div>
 
+          <!--=== Ejercicio 2=== -->
           <div class="col-lg-12">
-            <h3 class="resume-title">Ejercicio 2</h3>
+            <h3 class="resume-title" data-aos="fade-right">Ejercicio 2</h3>
             <div class="resume-item ">
-              <h4>html</h4>
+              <h4 data-aos="fade-left">html</h4>
 
-              <pre class=" pre-fondo  "><code class="   ">&lt;h2>Pregunta 2&lt;/h2>
+              <pre class=" pre-fondo  " data-aos="zoom-in" data-aos-delay="300"><code class="   ">&lt;h2>Pregunta 2&lt;/h2>
 &lt;p>Desarrollar la función CargarDatos(), para desplegar el contenido (Asincrónico) de un archivo XML: &lt;/p>
  
 &lt;ul>
@@ -263,15 +273,18 @@ ejercicio se utilizara una cadena de texto sobre animales pertenecientes a un zo
  &lt;div id="resolucion"> &lt;/div>
                     </code></pre>
 
-              <p>Dentro del HTML únicamente llama por medio del botón obtener datos a la función CargarDatos(), y presenta a manera
+              <p data-aos="fade-left">Dentro del HTML únicamente llama por medio del botón obtener datos a la función
+                CargarDatos(), y
+                presenta a manera
                 de lista el código que se debe hacer uso para este ejercicio.
               </p>
             </div>
             <div class="resume-item">
-              <h4>Sección del scrip</h4>
-              <p><em>La explicación de los procesos que hace el script están comentados dentro del mismo</em></p>
+              <h4 data-aos="fade-left">Sección del scrip</h4>
+              <p data-aos="fade-left"><em>La explicación de los procesos que hace el script están comentados dentro del
+                  mismo</em></p>
 
-              <pre class=" pre-fondo  "><code class="">//Envió de una solicitud al servidor 
+              <pre class=" pre-fondo  " data-aos="zoom-in" data-aos-delay="300"><code class="">//Envió de una solicitud al servidor 
 xhttp = new XMLHttpRequest(); //Creacion del objeto XMLHttpRequest
 xhttp.onreadystatechange = function () {
   //El intervalo que evalúa indica si el servidor esta listo para utilizarse 
@@ -295,46 +308,457 @@ function CargarDatos() {
 
   for (i = 0; i < x.length; i++) {
     Resolución hacer referencia al ID donde se mostrará la respuesta inner HTML permitirá establecer el contenido HTML 
-    document.getElementById("resolucion").innerHTML += xmlDoc.getElementsByTagName("nombre")[i].childNodes[0].nodeValue + " come " + xmlDoc.getElementsByTagName("comida")[i].childNodes[0].nodeValue + "<br>";
+    document.getElementById("resolucion").innerHTML += xmlDoc.getElementsByTagName("nombre")[i].childNodes[0].nodeValue + " come " +
+    xmlDoc.getElementsByTagName("comida")[i].childNodes[0].nodeValue + "<br>";
   }
 }
 //Se hace una solicitud, se envía la solicitud y se espera la respuesta 
   </code></pre>
-               
+
             </div>
             <div class="resume-item">
-              <h4>FUNCION</h4>
-              <h5>explicación</h5>
-              <p>Como se puede observar la función trae animal se repite 3 veces y en cada implementación el pequeño
-                cambio que se
-                realiza es en el índice, así que generalizadamente se explicará para una función donde más tarde se
-                puede extrapolar la
-                información.</p>
-              <pre class=" pre-fondo  "><code class="">function traerAnimal1() {
-  parser = new DOMParser();
-  xmlDoc = parser.parseFromString(text, "text/xml");
-  document.getElementById("p1").innerHTML = xmlDoc.getElementsByTagName("mamifero")[0].childNodes[0].nodeValue
-}</code></pre>
-              <p>Como se puede observar se explica brevemente DOMParser, luego de inicializar el objeto lo hace uso para
-                reaizar el
-                cambio de un string hacia xml. En la línea final buscará el elemento p1 que se encuentra definido en la
-                sección HTML y
-                lo cambiará por el valor del nombre del mamífero, ya que se hace uso de tal etiqueta del xml, y según el
-                inidice va
-                llamando según sea el caso, en nodo hijo siempre posee el valor 0, ya que tal etiqueta no posee “hijo”
+              <h4 data-aos="fade-left">FUNCIONES</h4>
+              <h5 data-aos="zoom-in" data-aos-delay="400">explicación</h5>
+              <p data-aos="fade-left">Dentro del script nos encontramos con estas líneas peculiares, las cuales hacen
+                uso del http, dentro de
+                estás tres líneas
+                se están ejecutando varios procesos la realización de una solicitud, el envió de dicha solicitud y
+                finalmente llama a la
+                respuesta que se ha generado.</p>
+
+              <pre class=" pre-fondo  " data-aos="zoom-in" data-aos-delay="300"><code class="">xhttp = new XMLHttpRequest(); 
+xhttp.onreadystatechange = function () {
+  //El intervalo que evalúa indica si el servidor esta listo para utilizarse 
+  if (this.readyState == 4 && this.status == 200) {
+
+  }
+};
+</code></pre>
+              <p data-aos="fade-left">En estas líneas tal como se he comentado el onreadystatechange da aviso cuando el
+                servidor se encuentra
+                listo para
+                utilizarse, esto sucede cuando el status se encuentra en un valor entre 4 y 200.
+                Las líneas que prosiguen para dicho ejercicio no ejecutan ningún proceso ya que el id demo no se
+                encuentra en ningún
+                párrafo dentro del archivo HTML.
               </p>
+              <pre class=" pre-fondo  " data-aos="zoom-in" data-aos-delay="300"><code class="">xhttp.open("GET", "preg2.xml", true);  
+xhttp.send();  
+                
+</code></pre>
+              <p data-aos="fade-left">Dentro de los atributos de open se envía tres de ellos, el método que se hará uso,
+                el nombre del
+                archivo y finalmente el
+                valor TRUE que en este caso hace referencia a procesos asíncronos.
+              </p>
+
+              <h5 data-aos="zoom-in" data-aos-delay="400">Archivo XML</h5>
+              <pre class=" pre-fondo  " data-aos="zoom-in" data-aos-delay="300"><code class=""> &lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+&lt;animales>
+  &lt;mamiferos>
+    &lt;id>A01&lt;/id>
+    &lt;nombre>El Oso&lt;/nombre>
+    &lt;comida>Miel&lt;/comida>
+  &lt;/mamiferos>
+  &lt;mamiferos>
+    &lt;id>A02&lt;/id>
+    &lt;nombre>El Guacamayo&lt;/nombre>
+    &lt;comida>Semillas&lt;/comida>
+  &lt;/mamiferos>
+  &lt;reptiles>
+    &lt;id>A03&lt;/id>
+    &lt;nombre>El Dinosaurio&lt;/nombre>
+    &lt;comida>Carne y hierba&lt;/comida>
+  &lt;/reptiles>
+&lt;/animales>
+                
+</code></pre>
+              <p data-aos="fade-left">Es importante mencionar que dentro para la realización de este ejercicio existe un
+                documento de tipo
+                xml en el cual
+                por medio de este lenguaje se declaran varios “objetos” del tipo que su etiqueta lo indica
+              </p>
+
+              <pre class=" pre-fondo  " data-aos="zoom-in" data-aos-delay="300"><code class="">var xmlDoc = xhttp.responseXML;
+var i;
+var x = xmlDoc.getElementsByTagName("nombre");
+
+for (i = 0; i < x.length; i++) {
+  Resolución hacer referencia al ID donde se mostrará la respuesta inner HTML permitirá establecer el contenido HTML 
+  document.getElementById("resolucion").innerHTML += xmlDoc.getElementsByTagName("nombre")[i].childNodes[0].nodeValue + 
+  " come " + xmlDoc.getElementsByTagName("comida")[i].childNodes[0].nodeValue + "<br>";
+}
+                
+</code></pre>
+              <p data-aos="fade-left">Como dentro de lo procesos descritos en http ya se llamo al xml y poseemos dicha
+                información, haremos
+                un llamado a
+                tal documento y llamaremos a todos los elementos que se encuentren dentro de las etiquetas nombre y las
+                guardará
+                en la variable x, más tarde por medio del uso de un for, hace uso de un inner html que es donde hará el
+                intercambio del
+                valor para el archivo html, aquí se concatenará el valor que se lleve dentro de la i posición de nombre,
+                así como el valor
+                que lleve la etiqueta come en dicha i posición, concatenando un salto de línea en cada “objeto”
+                diferente.
+              </p>
+
               <div class="row text-center botones1 mt-5">
 
                 <div class="col-lg-12 mt-2 mb-2">
-                  <button onclick="ejer1()"> Ejecución del ejercicio </button>
+                  <button onclick="ejer1()" data-aos="fade-down"> Ejecución del ejercicio </button>
                 </div>
               </div>
 
             </div>
           </div>
 
-          
+          <!--=== Ejercicio 3=== -->
+          <div class="col-lg-12">
+            <h3 class="resume-title" data-aos="fade-right">Ejercicio 3</h3>
+            <div class="resume-item ">
+              <h4 data-aos="fade-left">html</h4>
+
+              <pre class=" pre-fondo  " data-aos="zoom-in" data-aos-delay="300"><code class=" ">&lt;h2>Pregunta 3&lt;/h2>
+&lt;p>Escoja un actor de películas preferido para desplegar una tabla con la información correspondiente: &lt;/p>
+
+&lt;select  id="myselect" onchange="change_myselect(this.value)">
+  &lt;div>
+  &lt;option value="">Elija uno de los siguientes Actores.&lt;/option>
+  &lt;option value="Keanu Reaves">Keanu Reaves&lt;/option>
+  &lt;option value="Sylvester Stallone">Sylvester Stallone&lt;/option>
+  &lt;option value="Tom Cruise">Tom Cruise&lt;/option>
+  &lt;option value="Brad Pitt">Brad Pitt&lt;/option>
+  &lt;option value="Leonardo Di caprio">Leonardo Di caprio&lt;/option>&lt;/div>
+&lt;/select>
+
+  &lt;p>Tabla de contenido&lt;/p>
+&lt;p class="text-center" id="demo">
+&lt;/p>
+                   </code></pre>
+
+              <p data-aos="fade-left">En el código HTML indicado se indica como se desplegarán diferentes opciones las
+                cuales se encuentran
+                dentro del
+                archivo JSON de donde recuperará los datos, en base a esta esta elección se generará la tabla en el
+                elemento con el ID demo
+              </p>
+            </div>
+            <div class="resume-item">
+              <h4 data-aos="fade-left">Sección del scrip</h4>
+              <p data-aos="fade-left"><em>La explicación de los procesos que hace el script están comentados dentro del
+                  mismo</em></p>
+
+              <pre class=" pre-fondo  " data-aos="zoom-in" data-aos-delay="300"><code class="">// Desarrolle el script correspondiente, para que se escoja el actor y desplique todas las peliculas correspondientes a el.
+function change_myselect(sel) {
+  
+  //obtiene el valor de la selección del despliegue de opciones 
+  var obj, dbParam, xmlhttp;
+  obj = { table: sel, limit: 20 };
+
+  //Almacena una cadena de texto de formato JSON, transformando el objeto JS a JSON
+  dbParam = JSON.stringify(obj);
+  xmlhttp = new XMLHttpRequest();
+
+  xmlhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+
+      //Transforma a tipo JSON
+      var myObj = JSON.parse(this.responseText);
+
+      //Crea los encabezados de la tabla con un tipo de borde especifico 
+      var table = "&lt;table class='table'>&lt;thead '>&lt;tr>&lt;th>Genero&lt;/th>&lt;th>Nombre&lt;/th>&lt;/tr>&lt;/thead>&lt;tbody class='table-group-divider'>";
+      var i;
+
+      //A fin de iterar en cada objeto de las películas 
+      for (i in myObj.peliculas) {
+
+        //Busca en caso de ser igual a la selección realizada comparando con los protagonistas de los objetos JSON
+        if (myObj.peliculas[i].Protagonista == sel) {
+          table += "&lt;tr>&lt;td>" + myObj.peliculas[i].Genero + "&lt;/td>&lt;td>" + myObj.peliculas[i].Nombre + "&lt;/td>&lt;/tr>";
+        }
+      }
+
+      //Se cierra la tabla, se busca el id demo y se reemplaza por el valor que lleva la variable table
+      table += "&lt;/table>";
+      document.getElementById("demo").innerHTML = table;
+    }
+  };
+
+  xmlhttp.open("GET", "preg3.json", true);
+  xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xmlhttp.send("x=" + dbParam);
+}
+</code></pre>
+
+
+
+            </div>
+            <div class="resume-item">
+              <h4 data-aos="fade-left">FUNCIONES</h4>
+              <h5 data-aos="zoom-in" data-aos-delay="400">explicación</h5>
+              <p data-aos="fade-left">funciolalidades</p>
+
+              <pre class=" pre-fondo  " data-aos="zoom-in" data-aos-delay="300"><code class="">function change_myselect(sel) {
+  
+  var obj, dbParam, xmlhttp;
+  obj = { table: sel, limit: 20 };
+  dbParam = JSON.stringify(obj);
+  xmlhttp = new XMLHttpRequest();
+                
+</code></pre>
+              <p data-aos="fade-left">En estasección se crea la función que permite deplegar la tabla, se creará el
+                objeto JSON para más
+                tarde transformar el
+                JS a JSON.
+              </p>
+
+              <pre class=" pre-fondo  " data-aos="zoom-in" data-aos-delay="300"><code class="">xmlhttp.onreadystatechange = function () {
+  if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+    var table = "&lt;table class='table'>&lt;thead '>&lt;tr>&lt;th>Genero&lt;/th>&lt;th>Nombre&lt;/th>&lt;/tr>&lt;/thead>&lt;tbody class='table-group-divider'>";
+    var i;
+
+    for (i in myObj.peliculas) {
+      if (myObj.peliculas[i].Protagonista == sel) {
+        table += "&lt;tr>&lt;td>" + myObj.peliculas[i].Genero + "&lt;/td>&lt;td>" + myObj.peliculas[i].Nombre + "&lt;/td>&lt;/tr>";
+      }
+    }
+    table += "&lt;/table>";
+    document.getElementById("demo").innerHTML = table;
+  }
+};
+</code></pre>
+              <p data-aos="fade-left">La función interna que revisa si el servidor esta listo para ejecutar la operación
+                dará paso al JSON
+                parse, que
+                transformara el objeto en tipo JSON, para más tarde emepezar a crear la tabla en primer lugar los
+                encabezados y màs
+                tarde los valores de cada objeto del JSON.
+              </p>
+
+              <pre class=" pre-fondo  " data-aos="zoom-in" data-aos-delay="300"><code class="">xmlhttp.open("GET", "preg3.json", true);
+                xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xmlhttp.send("x=" + dbParam);
+              }
+              </code></pre>
+              <p data-aos="fade-left">Al igual al ser un proceso del tipo asíncrono hace uso del parámetro true dentro
+                de sus atributos, y el
+                set request
+                header crearà un encabezado http para la solicitud.
+              </p>
+
+              <h5 data-aos="zoom-in" data-aos-delay="400">Archivo JSON</h5>
+              <pre class=" pre-fondo  " data-aos="zoom-in" data-aos-delay="300"><code class="">{
+  "peliculas": [
+    {
+      "Genero": "Terror",
+      "Nombre": "annabel",
+      "Protagonista": "Keanu Reaves"
+    },
+
+    {
+      "Genero": "Terror",
+      "Nombre": "Terror en Silent Hills",
+      "Protagonista": "Sylvester Stallone"
+    },
+
+    {
+      "Genero": "Terror",
+      "Nombre": "It",
+      "Protagonista": "Tom Cruise"
+    }
+  ]
+}
+              
+</code></pre>
+              <p data-aos="fade-left">
+                El JSON en uso es el siguiente, en donde se puede observar la creación de los diferentes objetos así
+                como sus atributos
+                los cuales se buscaran según la selección y se realizará el despliegue.
+              </p>
+
+              <div class="row text-center botones1 mt-5">
+
+                <div class="col-lg-12 mt-2 mb-2">
+                  <button onclick="ejer1()" data-aos="fade-down"> Ejecución del ejercicio </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!--=== Ejercicio 4=== -->
+          <div class="col-lg-12">
+            <h3 class="resume-title" data-aos="fade-right">Ejercicio 4</h3>
+            <div class="resume-item ">
+              <h4 data-aos="fade-left">html</h4>
+
+              <pre class=" pre-fondo  " data-aos="zoom-in" data-aos-delay="300"><code class=" "> &lt;h2>Pregunta 4&lt;/h2>
+&lt;p>Mostrar datos XML en una tabla utilizando AJAX&lt;/p>
+
+&lt;button onclick="CargarTabla()">&lt;i class='bx bx-table'>&lt;/i> Obtener Tabla&lt;/button>
+
+&lt;table id="tablaVentas" >&lt;/table>
+</code></pre>
+
+              <p data-aos="fade-left">Para este caso el html únicamente hace uso de un botón que llamara a la función
+                CargarTabla, así mismo se tiene un
+                párrafo llamado Tabla ventas, el cual será tonde se proyectará la tabla. con el id="tablaVentas"
+              </p>
+            </div>
+            <div class="resume-item">
+              <h4 data-aos="fade-left">Sección del scrip</h4>
+              <p data-aos="fade-left"><em>La explicación de los procesos que hace el script están comentados dentro del
+                  mismo</em></p>
+
+              <pre class=" pre-fondo  " data-aos="zoom-in" data-aos-delay="300"><code class="">function CargarTabla() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      funcionTabla(this);
+    }
+  };
+
+  xhttp.open("GET", "preg4.xml", true);
+  xhttp.send();
+}
+
+function funcionTabla(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+
+  //Encabezado de la tabla a crear
+  var table = "&lt;tr>&lt;th>Numero&lt;/th>&lt;th>Title&lt;/th>&lt;th>Descripción&lt;/th>&lt;th>PrecioU&lt;/th>&lt;th>Cantidad&lt;/th>&lt;th>PrecioT&lt;/th>&lt;/tr>";
+  
+  //Se obtienen todos los elementos que estén dentro de la etiqueta producto   var productos = xmlDoc.getElementsByTagName("PRODUCTO");
+  for (i = 0; i &lt; productos.length; i++) {
+
+    //Para crear la tabla con cada producto nuevo se genera una fila nueva
+    //La línea se repite por la cantidad de atributos existentes 
+    table += "&lt;tr>&lt;td>" +
+      productos[i].getElementsByTagName("NUMERO")[0].childNodes[0].nodeValue +
+      "&lt;/td>&lt;td>" +
+      productos[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+      "&lt;/td>&lt;td>" +
+      productos[i].getElementsByTagName("DESCRIPCION")[0].childNodes[0].nodeValue +
+      "&lt;/td>&lt;td>" +
+      productos[i].getElementsByTagName("PRECIOU")[0].childNodes[0].nodeValue +
+      "&lt;/td>&lt;td>" +
+      productos[i].getElementsByTagName("CANTIDAD")[0].childNodes[0].nodeValue +
+      "&lt;/td>&lt;td>" +
+      productos[i].getElementsByTagName("PRECIOT")[0].childNodes[0].nodeValue +
+      "&lt;/td>&lt;/tr>";
+  }
+
+  //En todo el documento se busca el ID tabaventas para reemplazar por lo que se guardo dentro de la variable table 
+  document.getElementById("tablaVentas").innerHTML = table;
+}
+</code></pre>
+
+
+
+            </div>
+            <div class="resume-item">
+              <h4 data-aos="fade-left">FUNCIONES</h4>
+              <h5 data-aos="zoom-in" data-aos-delay="400">explicación</h5>
+              <p data-aos="fade-left">funciolalidades</p>
+
+              <pre class=" pre-fondo  " data-aos="zoom-in" data-aos-delay="300"><code class="">function CargarTabla() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      funcionTabla(this);
+    }
+  };
+
+  xhttp.open("GET", "preg4.xml", true);
+  xhttp.send();
+}
+</code></pre>
+              <p data-aos="fade-left">Para realizar la carga de la tabla realiza el proceso de solicitud http, e intenta
+                obtener la información del archivo xml, de
+                forma asincrónica como se puede observar al usar el parámetro true.
+              </p>
+
+              <h5 data-aos="zoom-in" data-aos-delay="400">Archivo XML</h5>
+
+              <pre class=" pre-fondo  " data-aos="zoom-in" data-aos-delay="300"><code class="">&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;VENTAS>
+  &lt;PRODUCTO>
+    &lt;NUMERO>1&lt;/NUMERO>
+    &lt;TITLE>COPMUTADORA HP&lt;/TITLE>
+    &lt;DESCRIPCION>LAPTOP HP&lt;/DESCRIPCION>
+    &lt;PRECIOU>1200.00&lt;/PRECIOU>
+    &lt;CANTIDAD>4&lt;/CANTIDAD>
+    &lt;PRECIOT>4800.00&lt;/PRECIOT>
+  &lt;/PRODUCTO>
+
+  &lt;PRODUCTO>
+    &lt;NUMERO>2&lt;/NUMERO>
+    &lt;TITLE>CLACULADORA&lt;/TITLE>
+    &lt;DESCRIPCION>CALCULADORA MODERNA&lt;/DESCRIPCION>
+    &lt;PRECIOU>18.00&lt;/PRECIOU>
+    &lt;CANTIDAD>9&lt;/CANTIDAD>
+    &lt;PRECIOT>162.00&lt;/PRECIOT>
+  &lt;/PRODUCTO>
+
+&lt;/VENTAS>
+</code></pre>
+              <p data-aos="fade-left">El xml usado en cuestión es el siguiente el cual maneja varios productos, y sus
+                atributos establecidos por medio de
+                etiquetas.
+              </p>
+
+              <pre class=" pre-fondo  " data-aos="zoom-in" data-aos-delay="300"><code class="">function funcionTabla(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table = "&lt;tr>&lt;th>Numero&lt;/th>&lt;th>Title&lt;/th>&lt;th>Descripción&lt;/th>&lt;th>PrecioU&lt;/th>&lt;th>Cantidad&lt;/th>&lt;th>PrecioT&lt;/th>&lt;/tr>";
+  var productos = xmlDoc.getElementsByTagName("PRODUCTO");
+
+  for (i = 0; i &lt; productos.length; i++) {
+    table += "&lt;tr>&lt;td>" +
+      productos[i].getElementsByTagName("NUMERO")[0].childNodes[0].nodeValue +
+      "&lt;/td>&lt;td>" +
+      productos[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+      "&lt;/td>&lt;td>" +
+      productos[i].getElementsByTagName("DESCRIPCION")[0].childNodes[0].nodeValue +
+      "&lt;/td>&lt;td>" +
+      productos[i].getElementsByTagName("PRECIOU")[0].childNodes[0].nodeValue +
+      "&lt;/td>&lt;td>" +
+      productos[i].getElementsByTagName("CANTIDAD")[0].childNodes[0].nodeValue +
+      "&lt;/td>&lt;td>" +
+      productos[i].getElementsByTagName("PRECIOT")[0].childNodes[0].nodeValue +
+      "&lt;/td>&lt;/tr>";
+  }
+  document.getElementById("tablaVentas").innerHTML = table;
+}
+              </code></pre>
+              <p data-aos="fade-left">La función tabla el cual recibe un xml dentro de sus parámetros será el
+                responsable de crear la tabla, al igual empieza
+                por crear el encabezado de la tabla, para más tarde obtener los elementos que se encuentren dentro de la
+                etiqueta
+                producto, es decir recibirá el objeto con todos sus atributos. Más tarde en base a esa recuperación
+                inicializa un for con
+                el número de elementos que posea productos y empieza a tomar cada uno de los valores que llevan los
+                atributos y va
+                creando las filas de la tabla al finalizar cada objeto.
+              </p>
+
+
+              <div class="row text-center botones1 mt-5">
+
+                <div class="col-lg-12 mt-2 mb-2">
+                  <button onclick="ejer1()" data-aos="fade-down"> Ejecución del ejercicio </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
         </div>
+
+      </div>
 
     </section><!-- End Resume Section -->
 
@@ -344,7 +768,7 @@ function CargarDatos() {
 
         <div class="section-title">
           <h2>Ejecucion de los Ejercicios</h2>
-          <p>A continuacion se presentara la ejecucion correcta de los ejercicios realizados.</p>
+          <p data-aos="fade-left">A continuacion se presentara la ejecucion correcta de los ejercicios realizados.</p>
         </div>
 
         <div class="row">
@@ -365,7 +789,7 @@ function CargarDatos() {
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Pregunta 1</h4>
+                <h4 data-aos="fade-left">Pregunta 1</h4>
                 <div class="portfolio-links">
                   <a href="html/P1/pregunta1.html" class="portfolio-details-lightbox" data-glightbox="type: external"
                     title="Portfolio Details"><i class="bx bx-link"></i></a>
@@ -378,7 +802,7 @@ function CargarDatos() {
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Pregunta 2</h4>
+                <h4 data-aos="fade-left">Pregunta 2</h4>
                 <div class="portfolio-links">
                   <a href="html/P2/pregunta2.html" class="portfolio-details-lightbox" data-glightbox="type: external"
                     title="Portfolio Details"><i class="bx bx-link"></i></a>
@@ -391,7 +815,7 @@ function CargarDatos() {
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Pregunta 3</h4>
+                <h4 data-aos="fade-left">Pregunta 3</h4>
                 <div class="portfolio-links">
                   <a href="html/P3/pregunta3.html" class="portfolio-details-lightbox" data-glightbox="type: external"
                     title="Portfolio Details"><i class="bx bx-link"></i></a>
@@ -404,7 +828,7 @@ function CargarDatos() {
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Pregunta 4</h4>
+                <h4 data-aos="fade-left">Pregunta 4</h4>
                 <div class="portfolio-links">
                   <a href="html/P4/pregunta4.html" class="portfolio-details-lightbox" data-glightbox="type: external"
                     title="Portfolio Details"><i class="bx bx-link"></i></a>
@@ -424,11 +848,11 @@ function CargarDatos() {
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
-    <div class="container">
+    <div class="container" data-aos="fade-up">
       <h3>Grupo 2</h3>
       <p>Solucionario </p>
 
-      <div class="social-links">
+      <div class="social-links" data-aos="zoom-in" data-aos-delay="600">
         <a href="https://twitter.com/ESPEU?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="twitter"><i
             class="bx bxl-twitter"></i></a>
         <a href="https://www.facebook.com/ESPE.U/?locale=es_LA" class="facebook"><i class="bx bxl-facebook"></i></a>
