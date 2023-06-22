@@ -1223,3 +1223,24 @@ section {
   padding: 10px;
   border-radius: 10px;
 }
+
+.block{
+  background:#444654;
+  padding: 10px;
+  border-radius: 10px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.html{
+  color:#D84924 ;
+}
+.javascript{
+  color: #F2CE08;
+}
+.texto-simple{
+  color: white;
+}
