@@ -1216,3 +1216,10 @@ section {
 #footer .credits {
   font-size: 13px;
 }
+
+.pre-fondo{
+  background:#444654;
+  color:#fff;
+  padding: 10px;
+  border-radius: 10px;
+}

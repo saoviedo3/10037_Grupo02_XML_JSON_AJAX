@@ -14,7 +14,9 @@
   <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
@@ -35,26 +37,29 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 
-<style type="text/css">
-       
-    body{
-        background: url("../../img/fondop4.jpg")  fixed no-repeat;
-        background-size: cover;
-        padding-top: 80px;
+  <style type="text/css">
+    body {
+
+      background: linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)), url("../../img/fondop4.jpg") fixed no-repeat;
+      background-size: cover;
+      padding-top: 80px;
+
 
     }
-        
 
-        table, th, td {
-            border: 1px solid black   ;
-            border-collapse: collapse;
-        }
 
-        th, td {
-            padding: 10px;
-        }
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
 
-    </style>
+    th,
+    td {
+      padding: 10px;
+    }
+  </style>
 </head>
 
 <body>
@@ -69,68 +74,69 @@
 
           <div class="col-lg-12">
 
-        <div class="section-title">
-          <h2>Pregunta 4</h2>
-          <p>Mostrar datos XML en una tabla utilizando AJAX</p>
-        </div>
-
-        <div class="section text-center botones1">
-            <button onclick="CargarTabla()"><i class='bx bx-table' ></i> Obtener Tabla</button>
-        </div>
-        <div class="mt-5">
-        <table id="tablaVentas"></table>
-        </div>
-
-    </div>
-              </div>
-              <div class="swiper-pagination"></div>
+            <div class="section-title">
+              <h2>Pregunta 4</h2>
+              <p>Mostrar datos XML en una tabla utilizando AJAX</p>
             </div>
+
+            <div class="section text-center botones1">
+              <button onclick="CargarTabla()"><i class='bx bx-table'></i> Obtener Tabla</button>
+            </div>
+            <div class="mt-5 d-flex justify-content-center align-items-center">
+              <table id="tablaVentas" class="table"></table>
+            </div>
+
           </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      </div>
 
     </section><!-- End Portfolio Details Section -->
 
   </main><!-- End #main -->
 
   <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <script>
-        function CargarTabla() {
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    funcionTabla(this);
-                }
-            };
-
-            xhttp.open("GET", "preg4.xml", true);
-            xhttp.send();
+    function CargarTabla() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          funcionTabla(this);
         }
+      };
 
-        function funcionTabla(xml) {
-            var i;
-            var xmlDoc = xml.responseXML;
-            var table = "<tr><th>Numero</th><th>Title</th><th>Descripción</th><th>PrecioU</th><th>Cantidad</th><th>PrecioT</th></tr>";
-            var productos = xmlDoc.getElementsByTagName("PRODUCTO");
+      xhttp.open("GET", "preg4.xml", true);
+      xhttp.send();
+    }
 
-            for (i = 0; i < productos.length; i++) {
-                table += "<tr><td>" +
-                    productos[i].getElementsByTagName("NUMERO")[0].childNodes[0].nodeValue +
-                    "</td><td>" +
-                    productos[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
-                    "</td><td>" +
-                    productos[i].getElementsByTagName("DESCRIPCION")[0].childNodes[0].nodeValue +
-                    "</td><td>" +
-                    productos[i].getElementsByTagName("PRECIOU")[0].childNodes[0].nodeValue +
-                    "</td><td>" +
-                    productos[i].getElementsByTagName("CANTIDAD")[0].childNodes[0].nodeValue +
-                    "</td><td>" +
-                    productos[i].getElementsByTagName("PRECIOT")[0].childNodes[0].nodeValue +
-                    "</td></tr>";
-            }
-            document.getElementById("tablaVentas").innerHTML = table;
-        }
-    </script>
+    function funcionTabla(xml) {
+      var i;
+      var xmlDoc = xml.responseXML;
+      var table = "<tr><th>Numero</th><th>Title</th><th>Descripción</th><th>PrecioU</th><th>Cantidad</th><th>PrecioT</th></tr>";
+      var productos = xmlDoc.getElementsByTagName("PRODUCTO");
+
+      for (i = 0; i < productos.length; i++) {
+        table += "<tr><td>" +
+          productos[i].getElementsByTagName("NUMERO")[0].childNodes[0].nodeValue +
+          "</td><td>" +
+          productos[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+          "</td><td>" +
+          productos[i].getElementsByTagName("DESCRIPCION")[0].childNodes[0].nodeValue +
+          "</td><td>" +
+          productos[i].getElementsByTagName("PRECIOU")[0].childNodes[0].nodeValue +
+          "</td><td>" +
+          productos[i].getElementsByTagName("CANTIDAD")[0].childNodes[0].nodeValue +
+          "</td><td>" +
+          productos[i].getElementsByTagName("PRECIOT")[0].childNodes[0].nodeValue +
+          "</td></tr>";
+      }
+      document.getElementById("tablaVentas").innerHTML = table;
+    }
+  </script>
 
   <!-- Vendor JS Files -->
   <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>

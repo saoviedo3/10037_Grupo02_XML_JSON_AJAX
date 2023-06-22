@@ -14,7 +14,9 @@
   <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
@@ -35,14 +37,13 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 
-<style type="text/css">
-        body {
-            background: url("../../img/fondop1.jpg") fixed no-repeat;
-            background-size: cover;
-            padding-top: 80px;
-        }
-
-    </style>
+  <style type="text/css">
+    body {
+      background: linear-gradient(rgba(255, 255, 255, .6), rgba(255, 255, 255, .6)), url("../../img/fondop1.jpg") fixed no-repeat;
+      background-size: cover;
+      padding-top: 80px;
+    }
+  </style>
 </head>
 
 <body>
@@ -57,71 +58,74 @@
 
           <div class="col-lg-12">
 
-        <div class="section-title">
-          <h2>Pregunta 1</h2>
-          <p>Analizar una cadena de texto en un objeto DOM XML y extraer esa Información con JavaScript, para este ejercicio se utilizara una cadena de texto sobre animales pertenecientes a un zoloogico</p>
-        </div>
-
-          <div class="row text-center botones1 mt-5">
-
-            <div class="col-lg-4">
-            <button onclick="traerAnimal1();"><i class="bx bxs-dog"></i> Traer Animal Vivo</button>
+            <div class="section-title">
+              <h2>Pregunta 1</h2>
+              <p>Analizar una cadena de texto en un objeto DOM XML y extraer esa Información con JavaScript, para este
+                ejercicio se utilizara una cadena de texto sobre animales pertenecientes a un zoloogico</p>
             </div>
-            <div class="col-lg-4">
-            <button onclick="traerAnimal2();"><i class="bx bx-plus-medical"></i><span> Traer Animal Muerto</span></button>
-            </div>
-            <div class="col-lg-4">
-            <button onclick="traerAnimal3();"><i class="bx bx-bone"></i> Traer Animal Extinto</button>
-            </div>
-          </div>
-        </p>
-        <div class="mt-5">
-        <strong><p class="text-center" id="p1"></p></strong>
-        </div>
-      </div>
 
+            <div class="row text-center botones1 mt-5">
 
-
+              <div class="col-lg-4 mt-2 mb-2">
+                <button onclick="traerAnimal1();"><i class="bx bxs-dog"></i> Traer Animal Vivo</button>
               </div>
-              <div class="swiper-pagination"></div>
+              <div class="col-lg-4 mt-2 mb-2">
+                <button onclick="traerAnimal2();"><i class="bx bx-plus-medical"></i><span> Traer Animal
+                    Muerto</span></button>
+              </div>
+              <div class="col-lg-4 mt-2 mb-2">
+                <button onclick="traerAnimal3();"><i class="bx bx-bone"></i> Traer Animal Extinto</button>
+              </div>
             </div>
+            </p>
+            <div class="mt-5 portfolio-info   text-center">
+              <strong>
+                <p class="text-center" id="p1"></p>
+              </strong>
+            </div>
+
           </div>
 
+        </div>
+
+      </div>
+      
     </section><!-- End Portfolio Details Section -->
 
   </main><!-- End #main -->
 
   <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
 
   <script>
-        var parser, xmlDoc;
-        //la cadena de texto muestra marca, modelo y estado
-        var text =
-            // "<tienda><celular><marca>Samsung</marca><modelo>A30</modelo><estado>nuevo</estado></celular><celular><marca>iPhone</marca><modelo>XII</modelo><estado>Usado</estado></celular></tienda>";
+    var parser, xmlDoc;
+    //la cadena de texto muestra marca, modelo y estado
+    var text =
+      // "<tienda><celular><marca>Samsung</marca><modelo>A30</modelo><estado>nuevo</estado></celular><celular><marca>iPhone</marca><modelo>XII</modelo><estado>Usado</estado></celular></tienda>";
 
-            "<zoologico><animal><mamifero>OSO</mamifero><habitat>clima frio</habitat><estado>vivo</estado></animal><animal><mamifero>Guacamayo</mamifero><habitat>clima calido</habitat><estado>muerto</estado></animal><animal><mamifero>Dinosaurio</mamifero><habitat>jungla</habitat><estado>extinto</estado></animal></zoologico>";
+      "<zoologico><animal><mamifero>OSO</mamifero><habitat>clima frio</habitat><estado>vivo</estado></animal><animal><mamifero>Guacamayo</mamifero><habitat>clima calido</habitat><estado>muerto</estado></animal><animal><mamifero>Dinosaurio</mamifero><habitat>jungla</habitat><estado>extinto</estado></animal></zoologico>";
 
-        function traerAnimal1() {
-            parser = new DOMParser();
-            xmlDoc = parser.parseFromString(text, "text/xml");
-            document.getElementById("p1").innerHTML = xmlDoc.getElementsByTagName("mamifero")[0].childNodes[0].nodeValue
-        }
+    function traerAnimal1() {
+      parser = new DOMParser();
+      xmlDoc = parser.parseFromString(text, "text/xml");
+      document.getElementById("p1").innerHTML = xmlDoc.getElementsByTagName("mamifero")[0].childNodes[0].nodeValue
+    }
 
-        function traerAnimal2() {
-            parser = new DOMParser();
-            xmlDoc = parser.parseFromString(text, "text/xml");
-            document.getElementById("p1").innerHTML = xmlDoc.getElementsByTagName("mamifero")[1].childNodes[0].nodeValue
-        }
+    function traerAnimal2() {
+      parser = new DOMParser();
+      xmlDoc = parser.parseFromString(text, "text/xml");
+      document.getElementById("p1").innerHTML = xmlDoc.getElementsByTagName("mamifero")[1].childNodes[0].nodeValue
+    }
 
-        function traerAnimal3() {
-            parser = new DOMParser();
-            xmlDoc = parser.parseFromString(text, "text/xml");
-            document.getElementById("p1").innerHTML = xmlDoc.getElementsByTagName("mamifero")[2].childNodes[0].nodeValue
-        }
+    function traerAnimal3() {
+      parser = new DOMParser();
+      xmlDoc = parser.parseFromString(text, "text/xml");
+      document.getElementById("p1").innerHTML = xmlDoc.getElementsByTagName("mamifero")[2].childNodes[0].nodeValue
+    }
 
-    </script>
+  </script>
 
   <!-- Vendor JS Files -->
   <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>

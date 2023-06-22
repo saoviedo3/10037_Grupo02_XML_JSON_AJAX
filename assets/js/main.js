@@ -5,6 +5,10 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+function ejer1() {
+  window.location.href = "#portfolio"; // Reemplaza la URL con la página a la que deseas redireccionar
+}
+
 (function() {
   "use strict";
 
